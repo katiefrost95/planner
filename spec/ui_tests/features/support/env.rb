@@ -1,6 +1,7 @@
 require 'capybara/cucumber'
 require 'capybara/dsl'
 require_relative '../lib/codebar'
+require '../../spec_helper'
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app,:browser => :chrome)
