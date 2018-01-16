@@ -31,6 +31,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
+gem 'selenium-webdriver'
 
 gem 'tzinfo-data'
 gem 'icalendar'
