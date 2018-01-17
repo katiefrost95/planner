@@ -1,4 +1,6 @@
 require_relative 'pages/homepage'
+require_relative 'pages/signing_in'
+require_relative 'pages/dashboard'
 require_relative 'pages/tutorials_page'
 
 module CodebarSite
@@ -11,5 +13,12 @@ module CodebarSite
     TutorialsPage.new
   end
 
+  def sign_in_page
+    SignIn.new
+  end
+
+  def dashboard
+    Dashboard.new
+  end
 
 end
