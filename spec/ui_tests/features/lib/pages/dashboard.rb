@@ -3,8 +3,8 @@ require 'capybara/dsl'
 class Dashboard
   include Capybara::DSL
 
-  def find_name_on_dashboard(name)
-    find_link(name).visible?
+  def find_name_on_dashboard
+    find_link("Edit").visible?
   end
 
 end
