@@ -11,8 +11,12 @@ class HomePage
     visit(HOMEPAGE_URL)
   end
 
+  def click_sign_in_link
+    find_link('Sign in').click
+  end
+
   def find_tutorials_link
-    find('a', text: 'Tutorials', exact: true)
+    find_link('Tutorials')
   end
 
   def click_tutorials_link

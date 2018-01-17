@@ -1,7 +1,6 @@
 Given("I am signed in") do
   homepage_page.visit_homepage
   homepage_page.find_menu
-  sleep 120
 end
 
 When("I click on menu") do
