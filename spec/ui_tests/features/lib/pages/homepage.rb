@@ -24,7 +24,7 @@ class HomePage
   end
 
   def find_menu
-    find(:id, MENU_ID)
+    find(:id,MENU_ID)
   end
 
   def click_menu
@@ -35,7 +35,12 @@ class HomePage
     find('a', text: 'Sign out', exact: true).click
   end
 
+  def click_student_signup
+    find_link("Sign up as a student").click
+  end
 
-
+  def click_coach_signup
+    find_link("Sign up as a coach").click
+  end
 
 end
