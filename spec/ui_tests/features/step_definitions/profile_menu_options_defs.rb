@@ -12,5 +12,13 @@ And("I click on dashboard") do
 end
 
 Then("I should be able view upcoming workshops in subscribed cities.") do
+  dashboard.find_name_on_dashboard
+end
+
+When("I click on profile") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("I should be able view my profile details.") do
   pending # Write code here that turns the phrase above into concrete actions
 end
