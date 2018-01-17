@@ -1,6 +1,5 @@
 Given("I open the homepage") do
   homepage_page.visit_homepage
-  sleep 3
 end
 
 Then("I should be on the homepage") do

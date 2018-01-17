@@ -9,5 +9,6 @@ class HomePage
     visit(HOMEPAGE_URL)
   end
 
+  
 
 end
