@@ -9,5 +9,8 @@ class HomePage
     visit(HOMEPAGE_URL)
   end
 
+  def click_sign_in_link
+    find_link('Sign in').click
+  end
 
 end
