@@ -3,7 +3,7 @@ Given("I am signed in") do
   homepage_page.find_menu
 end
 
-When("I click on menu") do
+And("I click on menu") do
   homepage_page.click_menu
 end
 
@@ -11,6 +11,6 @@ When("I click sign out") do
 
 end
 
-Then("i should be logged out of my account") do
+Then("I should be logged out of my account") do
   pending # Write code here that turns the phrase above into concrete actions
 end

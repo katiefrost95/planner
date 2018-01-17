@@ -3,7 +3,7 @@ require 'capybara/dsl'
 class HomePage
   include Capybara::DSL
 
-  HOMEPAGE_URL = 'http://localhost:3000'
+  HOMEPAGE_URL = 'localhost:3000'
   TUTORIAL_LINK_NAME = 'Tutorials'
   MENU_ID = "profile"
 
@@ -24,7 +24,7 @@ class HomePage
   end
 
   def find_menu
-    find(MENU_ID)
+    find(:id, MENU_ID)
   end
 
   def click_menu
