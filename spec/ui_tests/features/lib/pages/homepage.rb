@@ -43,4 +43,8 @@ class HomePage
     find_link("Sign up as a coach").click
   end
 
+  def click_host_a_workshop
+    find_link("Host a workshop").click
+  end
+
 end
