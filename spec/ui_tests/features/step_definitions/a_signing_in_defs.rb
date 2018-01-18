@@ -3,7 +3,7 @@ Given("I have an account") do
 end
 
 When("I sign into codebar") do
-  homepage_page.click_sign_in_link
+  nav_bar.click_sign_in_link
 end
 
 And("I sign in to github") do

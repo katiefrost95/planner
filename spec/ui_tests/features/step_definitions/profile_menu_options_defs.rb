@@ -1,6 +1,6 @@
 Given("I am logged in") do
   homepage_page.visit_homepage
-  homepage_page.click_sign_in_link
+  nav_bar.click_sign_in_link
   sign_in_page.github_username("fake_github123@hotmail.com")
   sign_in_page.github_password("Thisisfake123")
   sign_in_page.click_sign_in_button
@@ -75,12 +75,10 @@ Then("I should remain on the update my details page") do
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-And("I click on manage subscriptions") do
-
-end
-
 And("I click to subscribe to a city of my choice as a student") do
 
 end
 
-Then("I should successfully subscribe")
+Then("I should successfully subscribe") do
+
+end
