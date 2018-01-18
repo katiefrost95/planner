@@ -4,6 +4,7 @@ require_relative 'pages/dashboard'
 require_relative 'pages/tutorials_page'
 require_relative 'pages/new_member_signin'
 require_relative 'pages/menu_bar'
+require_relative 'pages/github_logout'
 
 module CodebarSite
 
@@ -29,6 +30,10 @@ module CodebarSite
 
   def menu_bar
     MenuBar.new
+  end
+
+  def github_logout
+    GithubLogout.new
   end
 
 end

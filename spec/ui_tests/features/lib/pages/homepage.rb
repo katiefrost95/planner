@@ -24,11 +24,7 @@ class HomePage
   end
 
   def find_menu
-<<<<<<< HEAD
-    find(:id, MENU_ID)
-=======
     find(:id,MENU_ID)
->>>>>>> 333100000148fe6d095758c8c8473c852ad75e55
   end
 
   def click_menu
