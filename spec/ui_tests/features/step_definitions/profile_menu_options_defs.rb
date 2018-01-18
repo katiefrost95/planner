@@ -26,24 +26,25 @@ Then("I should be able view my profile details.") do
   expect(profile.find_update_details_button).to be true
 end
 
-When("I click on manage subscriptions") do
-  pending # Write code here that turns the phrase above into concrete actions
+And("I click on manage subscriptions") do
+  menu_bar.menu_subscriptions
 end
 
 And("I click to subscribe to a city of my choice as a student") do
-  pending # Write code here that turns the phrase above into concrete actions
+  subscription_page.click_brighton_subscribe
 end
 
-Then("I should be successfully subscribing") do
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should successfully subscribe") do
+  nav_bar.click_menu
+  menu_bar.menu_profile
+  profile.find_subscription
 end
 
-When("I click on a city I have subscribed too as a student") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
 
 Then("I should successfully unsubscribe") do
-  pending # Write code here that turns the phrase above into concrete actions
+  nav_bar.click_menu
+  menu_bar.menu_profile
+  profile.find_not_subscribed
 end
 
 And("I click update my details") do
@@ -73,12 +74,4 @@ end
 
 Then("I should remain on the update my details page") do
   pending # Write code here that turns the phrase above into concrete actions
-end
-
-And("I click to subscribe to a city of my choice as a student") do
-
-end
-
-Then("I should successfully subscribe") do
-
 end
