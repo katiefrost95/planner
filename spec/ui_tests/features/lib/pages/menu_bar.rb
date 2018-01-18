@@ -15,5 +15,8 @@ class MenuBar
     find_link("My Profile").click
   end
 
+  def menu_invitations
+    find_link("Invitations").click
+  end
 
 end
