@@ -5,4 +5,3 @@ After do
     github_logout.click_dropdown_profile
     github_logout.click_logout
   end
-end

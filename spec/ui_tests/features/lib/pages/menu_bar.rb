@@ -15,5 +15,9 @@ class MenuBar
     find_link("My Profile").click
   end
 
+  def menu_details
+    find_link("Update your details").click
+  end
+
 
 end
