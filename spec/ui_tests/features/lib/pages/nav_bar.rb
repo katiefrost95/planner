@@ -26,7 +26,7 @@ class NavBar
   end
 
   def click_event_link
-
+    click_link("Events")
   end
 
 end

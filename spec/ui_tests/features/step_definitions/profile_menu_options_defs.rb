@@ -23,30 +23,6 @@ Then("I should be able view my profile details.") do
   expect(profile.find_update_details_button).to be true
 end
 
-When("I click on invitations") do
-  menu_bar.menu_invitations
-end
-
-Then("I should be able to view upcoming workshops or workshops attended") do
-  expect(invitations.upcoming_workshops).to be true
-  expect(invitations.attended_workshops).to be true
-end
-
-And("I am invited to an event") do
-  
-end
-
-When("I click RSVP to a course") do
-  invitations.click_rsvp
-end
-
-When("I click get my ticket") do
-  invitations.click_get_ticket
-end
-
-Then("I receive a message confirming my attendance") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
 
 And("I click update my details") do
   menu_bar.menu_details
@@ -86,3 +62,32 @@ And("I click to subscribe to a city of my choice as a student") do
 end
 
 Then("I should successfully subscribe")
+
+end
+
+When("I click on invitations") do
+  menu_bar.menu_invitations
+end
+
+Then("I should be able to view upcoming workshops or workshops attended") do
+  expect(invitations.upcoming_workshops).to be true
+  expect(invitations.attended_workshops).to be true
+end
+
+And("I am invited to an event") do
+  nav_bar.click_event_link
+  events.click_on_a_workshop
+  events.click_attend_as_student
+end
+
+When("I click RSVP to a course") do
+  invitations.click_rsvp
+end
+
+When("I click get my ticket") do
+  invitations.click_get_ticket
+end
+
+Then("I receive a message confirming my attendance") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
