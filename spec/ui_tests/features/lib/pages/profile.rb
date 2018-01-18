@@ -7,4 +7,8 @@ class Profile
     find_link("Update your details").visible?
   end
 
+  def find_words_on_page(words)
+    find("h2", :text => words)
+  end
+
 end

@@ -47,3 +47,42 @@ end
 Then("I receive a message confirming my attendance") do
   pending # Write code here that turns the phrase above into concrete actions
 end
+
+And("I click update my details") do
+  menu_bar.menu_details
+end
+
+And("I fill in my details with the info I want") do
+  update_details.member_name_input("Nigel Noodle")
+  update_details.member_pronouns_input("Shee")
+  update_details.member_email_input("test@gmail.com")
+  update_details.member_mobile_input('00000000')
+  update_details.member_description_input("I am a great coder")
+  update_details.member_twitter_input('twitter')
+end
+
+When("I click save") do
+  update_details.click_save
+end
+
+Then("my details should be successfully updated") do
+  profile.find_words_on_page('Nigel Noodle')
+end
+
+And("I don’t fill in the tell me about yourself box") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("I should remain on the update my details page") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+And("I click on manage subscriptions") do
+
+end
+
+And("I click to subscribe to a city of my choice as a student") do
+
+end
+
+Then("I should successfully subscribe")
