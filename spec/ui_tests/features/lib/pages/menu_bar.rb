@@ -11,5 +11,9 @@ class MenuBar
     find_link("Manage subscriptions").click
   end
 
+  def menu_profile
+    find_link("My Profile").click
+  end
+
 
 end

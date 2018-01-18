@@ -31,6 +31,10 @@ module CodebarSite
   def menu_bar
     MenuBar.new
   end
+  
+  def profile
+    Profile.new
+  end
 
   def github_logout
     GithubLogout.new

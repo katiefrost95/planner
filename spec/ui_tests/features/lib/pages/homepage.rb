@@ -15,6 +15,10 @@ class HomePage
     find_link('Sign in').click
   end
 
+  def sign_in_link_visible?
+    find_link('Sign in').visible?
+  end
+
   def find_tutorials_link
     find_link('Tutorials')
   end
@@ -24,12 +28,16 @@ class HomePage
   end
 
   def find_menu
-    find(:id,MENU_ID)
+    find(:id, MENU_ID).click
   end
 
-  def click_menu
-    find_menu.click
+  def menu_visible
+    find(:id, MENU_ID).visible?
   end
+
+  # def click_menu
+  #   find_menu.click
+  # end
 
   def click_log_out
     find('a', text: 'Sign out', exact: true).click
@@ -41,6 +49,10 @@ class HomePage
 
   def click_coach_signup
     find_link("Sign up as a coach").click
+  end
+
+  def click_host_a_workshop
+    find_link("Host a workshop").click
   end
 
 end

@@ -13,14 +13,11 @@ class GithubLogout
   end
 
   def click_dropdown_profile
-    # find(:id, PROFILE_DROPDOWN).click
-    # find(:xpath, "//img[@class='avatar']/@src").click
-    find(:css, "avatar.float-left.mr-1").click
+    find('summary[aria-label="View profile and more"]').click
   end
 
   def click_logout
-    find("Sign out").click
-    sleep 2
+    click_button("Sign out")
   end
 
 
