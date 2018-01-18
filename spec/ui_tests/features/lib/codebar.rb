@@ -7,6 +7,7 @@ require_relative 'pages/menu_bar'
 require_relative 'pages/github_logout'
 require_relative 'pages/nav_bar'
 require_relative 'pages/subscription'
+require_relative 'pages/invitations'
 
 module CodebarSite
 
@@ -42,12 +43,17 @@ module CodebarSite
     GithubLogout.new
   end
 
+<<<<<<< HEAD
   def nav_bar
     NavBar.new
   end
 
   def subscription_page
     SubscriptionPage.new
+=======
+  def invitations
+    Invitations.new
+>>>>>>> Katie-writing_tests
   end
 
 end
