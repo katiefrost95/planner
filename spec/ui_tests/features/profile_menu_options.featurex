@@ -1,0 +1,25 @@
+Feature: Menu Bar
+
+Scenario: As a user I can view the dashboard
+	Given I am logged in
+	When I click on menu
+	And I click on dashboard
+	Then I should be able view upcoming workshops in subscribed cities.
+ 
+# Scenario: As a user I can view my profile.
+# 	Given I am logged in
+# 	When I click on menu
+# 	And I click on profile
+# 	Then I should be able view my profile details.
+
+Scenario: As a user I can successfully manage my subscriptions
+	Given I click on menu
+	And I click on manage subscriptions
+	And I click to subscribe to a city of my choice as a student
+	Then I should be successfully subscribing
+
+Scenario: As a user I can unsubscribe from a city
+	Given I click on menu
+	And I click on manage subscriptions
+	And I click on a city I have subscribed too as a student
+	Then I should successfully unsubscribe

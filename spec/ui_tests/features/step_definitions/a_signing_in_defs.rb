@@ -13,5 +13,8 @@ And("I sign in to github") do
 end
 
 Then("I can see my account dashboard") do
-  expect(dashboard.find_name_on_dashboard("grace hopper")).to be true
+  # expect(dashboard.find_name_on_dashboard("grace hopper")).to be true
+  github_logout.visit_github
+  github_logout.click_dropdown_profile
+  github_logout.click_logout
 end
