@@ -31,4 +31,8 @@ module CodebarSite
     MenuBar.new
   end
 
+  def profile
+    Profile.new
+  end
+
 end

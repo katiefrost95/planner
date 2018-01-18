@@ -7,5 +7,9 @@ class MenuBar
     find_link("My Dashboard").click
   end
 
-  
+  def menu_profile
+    find_link("My Profile").click
+  end
+
+
 end

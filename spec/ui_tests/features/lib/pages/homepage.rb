@@ -24,16 +24,12 @@ class HomePage
   end
 
   def find_menu
-<<<<<<< HEAD
-    find(:id, MENU_ID)
-=======
-    find(:id,MENU_ID)
->>>>>>> 333100000148fe6d095758c8c8473c852ad75e55
+    find(:id, MENU_ID).click
   end
 
-  def click_menu
-    find_menu.click
-  end
+  # def click_menu
+  #   find_menu.click
+  # end
 
   def click_log_out
     find('a', text: 'Sign out', exact: true).click

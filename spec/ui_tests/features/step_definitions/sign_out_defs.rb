@@ -4,7 +4,7 @@ Given("I am signed in") do
 end
 
 And("I click on menu") do
-  homepage_page.click_menu
+  homepage_page.find_menu
 end
 
 When("I click sign out") do
