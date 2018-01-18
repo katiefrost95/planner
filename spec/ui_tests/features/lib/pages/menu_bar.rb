@@ -7,5 +7,5 @@ class MenuBar
     find_link("My Dashboard").click
   end
 
-  
+
 end
