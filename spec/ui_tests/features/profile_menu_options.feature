@@ -27,14 +27,15 @@ Scenario: As a user I can unsuccessfully update my details
 	And I don’t fill in the tell me about yourself box
 	Then I should remain on the update my details page
 
-Scenario: As a user I can successfully manage my subscriptions
+Scenario: As a user I can update my details
 	Given I am logged in
 	When I click on menu
-	And I click on manage subscriptions
-	And I click to subscribe to a city of my choice as a student
-	Then I should successfully subscribe
+	And I click update my details
+	And I fill in my details with the info I want
+	And I click save
+	Then my details should be successfully updated
 
-Scenario: As a user I can unsubscribe from a city
+Scenario: As a user I can unsuccessfully update my details
 	Given I am logged in
 	When I click on menu
 	And I click on manage subscriptions
