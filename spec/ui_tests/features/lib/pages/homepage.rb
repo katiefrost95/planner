@@ -15,6 +15,10 @@ class HomePage
     find_link('Sign in').click
   end
 
+  def sign_in_link_visible?
+    find_link('Sign in').visible?
+  end
+
   def find_tutorials_link
     find_link('Tutorials')
   end
@@ -25,6 +29,10 @@ class HomePage
 
   def find_menu
     find(:id, MENU_ID).click
+  end
+
+  def menu_visible
+    find(:id, MENU_ID).visible?
   end
 
   # def click_menu

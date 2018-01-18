@@ -4,7 +4,7 @@ class Profile
   include Capybara::DSL
 
   def find_update_details_button
-    find_link("Update your details").displayed?
+    find_link("Update your details").visible?
   end
 
 end

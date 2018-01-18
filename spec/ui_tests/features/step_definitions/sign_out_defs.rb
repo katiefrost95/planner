@@ -1,6 +1,9 @@
 Given("I am signed in") do
   homepage_page.visit_homepage
-  homepage_page.find_menu
+  homepage_page.click_sign_in_link
+  sign_in_page.github_username("fake_github123@hotmail.com")
+  sign_in_page.github_password("Thisisfake123")
+  sign_in_page.click_sign_in_button
 end
 
 And("I click on menu") do
@@ -8,9 +11,9 @@ And("I click on menu") do
 end
 
 When("I click sign out") do
-
+  homepage_page.click_log_out
 end
 
 Then("I should be logged out of my account") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(homepage_page.sign_in_link_visible?).to be true
 end

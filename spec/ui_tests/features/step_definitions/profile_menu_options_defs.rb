@@ -4,10 +4,6 @@ Given("I am logged in") do
   sign_in_page.github_username("fake_github123@hotmail.com")
   sign_in_page.github_password("Thisisfake123")
   sign_in_page.click_sign_in_button
-<<<<<<< HEAD
-  sign_in_page.click_authorize_button
-=======
->>>>>>> merge_conflicts_branch
 end
 
 And("I click on dashboard") do
@@ -18,9 +14,9 @@ Then("I should be able view upcoming workshops in subscribed cities.") do
   dashboard.find_name_on_dashboard
 end
 
-Given("I am on the homepage") do
-  homepage_page.visit_homepage
-end
+# Given("I am on the homepage") do
+#   homepage_page.visit_homepage
+# end
 
 When("I click on profile") do
   menu_bar.menu_profile
