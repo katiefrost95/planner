@@ -59,6 +59,10 @@ module CodebarSite
   def update_details
     UpdateDetails.new
   end
-  
+
+  def events
+    Events.new
+  end
+
 
 end
