@@ -5,30 +5,9 @@ class HomePage
 
   HOMEPAGE_URL = 'localhost:3000'
   TUTORIAL_LINK_NAME = 'Tutorials'
-  MENU_ID = "profile"
 
   def visit_homepage
     visit(HOMEPAGE_URL)
-  end
-
-  def click_sign_in_link
-    find_link('Sign in').click
-  end
-
-  def sign_in_link_visible?
-    find_link('Sign in').visible?
-  end
-
-  def find_tutorials_link
-    find_link('Tutorials')
-  end
-
-  def click_tutorials_link
-    find_tutorials_link.click
-  end
-
-  def find_menu
-    find(:id, MENU_ID).click
   end
 
   def menu_visible
@@ -53,6 +32,10 @@ class HomePage
 
   def click_host_a_workshop
     find_link("Host a workshop").click
+  end
+
+  def click_events_link
+    find_link("Events").click
   end
 
 end

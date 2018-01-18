@@ -5,6 +5,7 @@ class SignIn
 
   GITHUB_USERNAME = "login_field"
   GITHUB_PASSWORD = "password"
+  AUTHORIZE_BUTTON_ID = 'js-oauth-authorize-btn'
 
 
   def github_username(username)
@@ -17,6 +18,10 @@ class SignIn
 
   def click_sign_in_button
     click_button("Sign in")
+  end
+
+  def click_authorize_button_displayed
+    find(:id, AUTHORIZE_BUTTON_ID).visible?
   end
 
   def click_authorize_button
