@@ -9,6 +9,10 @@ class Events
     click_link("Workshop")
   end
 
+  def click_on_an_event
+    click_link("Event")
+  end
+
   def click_attend_as_student
     find_link("Attend as a student").click
   end
