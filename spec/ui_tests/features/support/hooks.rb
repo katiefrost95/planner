@@ -14,6 +14,14 @@ Before('@subscribe') do
   end
 end
 
+# Before('@subscribe') do
+#   nav_bar.click_menu
+#   menu_bar.menu_subscriptions
+#   if subscription_page.check_london_students_button
+#     subscription_page.click_london_students_subscribe_button
+#   end
+# end
+
 After('~@tutorials','~@sign_out') do
   nav_bar.click_menu
   homepage_page.click_log_out
