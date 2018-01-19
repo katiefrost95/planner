@@ -1,4 +1,4 @@
-@signing_out
+@sign_out
 Feature: Signing out
 
 Scenario: As a user I can successfully sign out
