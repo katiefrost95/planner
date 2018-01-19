@@ -38,9 +38,19 @@ end
 
 
 Then("I should successfully unsubscribe") do
+    nav_bar.click_menu
+    menu_bar.menu_profile
+  if profile.find_coaches_subscription
+    homepage_page.visit_homepage
+    nav_bar.click_menu
+    menu_bar.menu_subscriptions
+    subscription_page.click_london_coaches_subscribe_button
+  end
+  homepage_page.visit_homepage
   nav_bar.click_menu
   menu_bar.menu_profile
   profile.find_not_subscribed
+
 end
 
 And("I click update my details") do

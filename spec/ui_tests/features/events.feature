@@ -20,3 +20,7 @@ Feature: Events
     And I click attend as coach
     And I click RSVP as a coach
     Then I should receive the corresponding attend event message
+
+  # Scenario: As a coach already signed in I should be able to unsubscribe from a city I have subscribed too
+  #   Given I am on the codebar homepage
+  #   And I am subscribed as a coach to one of the locations
