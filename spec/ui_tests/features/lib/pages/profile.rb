@@ -19,5 +19,17 @@ class Profile
     find("label", :text => "You are not subscribed to any chapters")
   end
 
+  def find_subscribed_london_student
+    find("a", :text => "Students (London)").visible?
+  end
+
+  def find_subscription
+    find("a", :text => "Students (Brighton)").visible?
+  end
+
+  def find_london_coaches
+    find("a", :text => "Coaches (London)").visible?
+  end
+
 
 end

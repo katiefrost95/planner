@@ -2,9 +2,9 @@ require 'capybara/cucumber'
 require 'capybara/dsl'
 require_relative '../lib/codebar'
 
-# Capybara.register_driver :firefox do |app|
-#   Capybara::Selenium::Driver.new(app,:browser => :firefox)
-# end
+Capybara.register_driver :firefox do |app|
+  Capybara::Selenium::Driver.new(app,:browser => :firefox)
+end
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app,:browser => :chrome)

@@ -11,7 +11,7 @@ Scenario: As a user I can view my profile.
 	When I click on menu
 	And I click on profile
 	Then I should be able view my profile details.
-#
+# #
 Scenario: As a user I can update my details
 	Given I am logged in
 	When I click on menu
@@ -31,8 +31,7 @@ Scenario: As a user I can RSVP to my invitations
     And I am invited to an event
     And I click on menu
     When I click on invitations
-    And I click RSVP to a course
-    And I click get my ticket
+    And I click attending to the workshop
     Then I receive a message confirming my attendance
 
 Scenario: As a user I can successfully manage my subscriptions

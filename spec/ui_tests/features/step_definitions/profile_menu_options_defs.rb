@@ -38,9 +38,19 @@ end
 
 
 Then("I should successfully unsubscribe") do
+    nav_bar.click_menu
+    menu_bar.menu_profile
+  if profile.find_london_coaches
+    homepage_page.visit_homepage
+    nav_bar.click_menu
+    menu_bar.menu_subscriptions
+    subscription_page.click_london_coaches_subscribe_button
+  end
+  homepage_page.visit_homepage
   nav_bar.click_menu
   menu_bar.menu_profile
   profile.find_not_subscribed
+
 end
 
 And("I click update my details") do
@@ -88,11 +98,13 @@ And("I am invited to an event") do
   events.click_attend_as_student
   events.click_dropdown
   events.click_dropdown_option
+  events.click_attend_button
   events.check_on_confirmation_page
+
 end
 
 And("I click attending to the workshop") do
-  invitations.click_rsvp
+  invitations.click_attending
 end
 
 Then("I receive a message confirming my attendance") do
