@@ -37,4 +37,8 @@ class Invitations
     find_link("I can no longer attend").visible?
   end
 
+  def click_manage_invitation_button
+    click_link("Manage your invitation")
+  end
+
 end

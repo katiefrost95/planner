@@ -15,4 +15,10 @@ class AttendEventPage
     page.body
   end
 
+  def click_cancel_my_spot_button
+    accept_alert do
+      click_link('Cancel my spot')
+    end
+  end
+
 end
