@@ -98,11 +98,13 @@ And("I am invited to an event") do
   events.click_attend_as_student
   events.click_dropdown
   events.click_dropdown_option
+  events.click_attend_button
   events.check_on_confirmation_page
+
 end
 
 And("I click attending to the workshop") do
-  invitations.click_rsvp
+  invitations.click_attending
 end
 
 Then("I receive a message confirming my attendance") do

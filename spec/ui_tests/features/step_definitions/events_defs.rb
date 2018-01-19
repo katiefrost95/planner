@@ -18,7 +18,7 @@ And("I click attend button") do
 end
 
 Then("I should receive the corresponding attend workshop message") do
-  expect(invitations.find_response_message).to include('Thanks for getting back to us Jane. See you at the workshop!')
+  expect(invitations.find_response_message).to include('Thanks for getting back to us').and include('See you at the workshop!')
 end
 
 And("I click on an event") do
