@@ -15,5 +15,5 @@ When("I click sign out") do
 end
 
 Then("I should be logged out of my account") do
-  expect(homepage_page.sign_in_link_visible?).to be true
+  expect(nav_bar.sign_in_link_visible?).to be true
 end

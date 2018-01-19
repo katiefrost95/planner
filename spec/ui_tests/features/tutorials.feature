@@ -1,3 +1,4 @@
+@tutorials
 Feature: Click on tutorial links
 
   Scenario Outline: As a user I should be able to view the tutorials

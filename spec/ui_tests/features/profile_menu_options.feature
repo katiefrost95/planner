@@ -26,14 +26,14 @@ Scenario: As a user I can view my invitations
 	And I click on invitations
 	Then I should be able to view upcoming workshops or workshops attended
 
-Scenario: As a user I can RSVP to my invitations
-    Given I am logged in
-    And I am invited to an event
-    And I click on menu
-    When I click on invitations
-    And I click RSVP to a course
-    And I click get my ticket
-    Then I receive a message confirming my attendance
+# Scenario: As a user I can RSVP to my invitations
+#     Given I am logged in
+#     And I am invited to an event
+#     And I click on menu
+#     When I click on invitations
+#     And I click RSVP to a course
+#     And I click get my ticket
+#     Then I receive a message confirming my attendance
 
 Scenario: As a user I can successfully manage my subscriptions
 	Given I am logged in
