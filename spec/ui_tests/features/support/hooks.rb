@@ -14,7 +14,7 @@ Before('@subscribe') do
   end
 end
 
-After('~@tutorials') do
+After('~@tutorials','~@sign_out') do
   nav_bar.click_menu
   homepage_page.click_log_out
   github_logout.visit_github
