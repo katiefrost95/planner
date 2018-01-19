@@ -1,13 +1,4 @@
 And("I am subscribed as a coach to one of the locations") do
-
-  # if sign_in_page.click_authorize_button_displayed
-  #   sleep 20
-  #   sign_in_page.click_authorize_button
-  # end
-
-  nav_bar.click_menu
-  menu_bar.menu_subscriptions
-  subscription_page.click_london_coaches_subscribe_button
 end
 
 When("I click on events link") do
@@ -15,25 +6,29 @@ When("I click on events link") do
 end
 
 And("I click on a workshop") do
-
+  events.click_on_a_workshop
 end
 
 And("I click attend as coach") do
-
+  workshops_page.click_attend_as_coach_button
 end
 
 And("I click attend button") do
-
+  invitations.click_attend_workshop
 end
 
-Then("I should receive the corresponding message") do
-
+Then("I should receive the corresponding attend workshop message") do
+  expect(invitations.find_response_message).to include('Thanks for getting back to us Jane. See you at the workshop!')
 end
 
 And("I click on an event") do
-  pending # Write code here that turns the phrase above into concrete actions
+  events.click_on_an_event
 end
 
 And("I click RSVP as a coach") do
-  pending # Write code here that turns the phrase above into concrete actions
+  attend_event_page.click_rsvp_coach_button
+end
+
+Then("I should receive the corresponding attend event message") do
+  expect(attend_event_page.find_response_message).to include('Your spot has been confirmed for Event! We look forward to seeing you there.')
 end

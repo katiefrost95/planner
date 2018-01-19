@@ -83,7 +83,7 @@ Then("I should successfully subscribe") do
 
 end
 
-Then("I should successfully subscribe")
+Then("I should successfully subscribe") do
 
 end
 

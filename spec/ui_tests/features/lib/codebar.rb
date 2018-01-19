@@ -9,6 +9,8 @@ require_relative 'pages/github_logout'
 require_relative 'pages/nav_bar'
 require_relative 'pages/subscription'
 require_relative 'pages/invitations'
+require_relative 'pages/workshops_page'
+require_relative 'pages/attend_event_page'
 
 module CodebarSite
 
@@ -62,6 +64,14 @@ module CodebarSite
 
   def events
     Events.new
+  end
+
+  def workshops_page
+    WorkshopPage.new
+  end
+
+  def attend_event_page
+    AttendEventPage.new
   end
 
 
