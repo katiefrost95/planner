@@ -35,24 +35,16 @@ Scenario: As a user I can update my details
 	And I click save
 	Then my details should be successfully updated
 
-Scenario: As a user I can unsuccessfully update my details
-	Given I am logged in
-	When I click on menu
-	And I click on manage subscriptions
-	And I click on a city I have subscribed too as a student
-	Then I should successfully unsubscribe
-
 Scenario: As a user I can view my invitations
 	Given I am logged in
 	When I click on menu
 	And I click on invitations
-	Then I should be able to view upcoming workshops/workshops attended
+	Then I should be able to view upcoming workshops or workshops attended
 
 Scenario: As a user I can RSVP to my invitations
-    Given I am logged in
-    And I am invited to an event
-    And I click on menu
-    When I click on invitations
-    And I click RSVP to a course
-    And I click get my ticket
-    Then I receive a message confirming my attendance
+  Given I am logged in
+  And I am invited to an event
+  And I click on menu
+  When I click on invitations
+  And I click attending to the workshop
+  # Then I receive a message confirming my attendance

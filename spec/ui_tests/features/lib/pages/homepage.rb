@@ -14,10 +14,6 @@ class HomePage
     find(:id, MENU_ID).visible?
   end
 
-  # def click_menu
-  #   find_menu.click
-  # end
-
   def click_log_out
     find('a', text: 'Sign out', exact: true).click
   end
