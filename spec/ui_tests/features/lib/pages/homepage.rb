@@ -10,6 +10,10 @@ class HomePage
     visit(HOMEPAGE_URL)
   end
 
+  def find_sign_in
+    find('span', :text => "Sign in")
+  end
+
   def menu_visible
     find(:id, MENU_ID).visible?
   end
