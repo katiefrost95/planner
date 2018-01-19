@@ -11,7 +11,7 @@ Scenario: As a user I can view my profile.
 	When I click on menu
 	And I click on profile
 	Then I should be able view my profile details.
-
+#
 Scenario: As a user I can update my details
 	Given I am logged in
 	When I click on menu

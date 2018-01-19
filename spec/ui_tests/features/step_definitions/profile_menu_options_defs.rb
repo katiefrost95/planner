@@ -50,7 +50,7 @@ end
 And("I fill in my details with the info I want") do
   update_details.member_name_input("Nigel Noodle")
   update_details.member_pronouns_input("Shee")
-  update_details.member_email_input("test@gmail.com")
+  update_details.member_email_input("fake_github123@hotmail.com")
   update_details.member_mobile_input('00000000')
   update_details.member_description_input("I am a great coder")
   update_details.member_twitter_input('twitter')
