@@ -24,7 +24,7 @@ Scenario: As a user I can view my invitations
 	Given I am logged in
 	When I click on menu
 	And I click on invitations
-	Then I should be able to view upcoming workshops/workshops attended
+	Then I should be able to view upcoming workshops or workshops attended
 
 Scenario: As a user I can RSVP to my invitations
     Given I am logged in

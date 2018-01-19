@@ -21,4 +21,12 @@ class Invitations
     find_link("Get your ticket").click
   end
 
+  def click_attending
+    click_link("Attending")
+  end
+
+  def find_cannot_attend
+    find_link("I can no longer attend").visible?
+  end
+
 end

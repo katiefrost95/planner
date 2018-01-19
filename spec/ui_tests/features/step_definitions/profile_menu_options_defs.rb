@@ -14,10 +14,6 @@ Then("I should be able view upcoming workshops in subscribed cities.") do
   dashboard.find_name_on_dashboard
 end
 
-# Given("I am on the homepage") do
-#   homepage_page.visit_homepage
-# end
-
 When("I click on profile") do
   menu_bar.menu_profile
 end
@@ -90,16 +86,15 @@ And("I am invited to an event") do
   nav_bar.click_event_link
   events.click_on_a_workshop
   events.click_attend_as_student
+  events.click_dropdown
+  events.click_dropdown_option
+  events.check_on_confirmation_page
 end
 
-When("I click RSVP to a course") do
+And("I click attending to the workshop") do
   invitations.click_rsvp
 end
 
-When("I click get my ticket") do
-  invitations.click_get_ticket
-end
-
 Then("I receive a message confirming my attendance") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(invitations.find_cannot_attend).to be true
 end
