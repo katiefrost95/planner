@@ -21,3 +21,24 @@ After('~@tutorials') do
   github_logout.click_dropdown_profile
   github_logout.click_logout
 end
+
+# Before('@homepage_signup_student_coach') do
+#   homepage_page.visit_homepage
+#    nav_bar.click_menu
+#    menu_bar.menu_profile
+#  if profile.find_london_coaches
+#    homepage_page.visit_homepage
+#    nav_bar.click_menu
+#    menu_bar.menu_subscriptions
+#    subscription_page.click_london_coaches_subscribe_button
+#  end
+#  homepage_page.visit_homepage
+#  nav_bar.click_menu
+#  menu_bar.menu_profile
+#  if profile.find_subscribed_london_student
+#    homepage_page.visit_homepage
+#    nav_bar.click_menu
+#    menu_bar.menu_subscriptions
+#    subscription_page.click_london_students
+#  end
+# end
