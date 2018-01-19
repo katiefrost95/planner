@@ -1,7 +1,7 @@
 @events
 Feature: Events
 
-@dothis
+  @subscribe
   Scenario: As a coach already signed in I should be able to access events page and choose to attend a workshop
     Given I am on the codebar homepage
     And I am subscribed as a coach to one of the locations
@@ -11,7 +11,7 @@ Feature: Events
     And I click attend button
     Then I should receive the corresponding attend workshop message
 
-  @notthis
+
   Scenario: As a coach already signed in I should be able to access events page and choose to attend an event
     Given I am on the codebar homepage
     And I am subscribed as a coach to one of the locations

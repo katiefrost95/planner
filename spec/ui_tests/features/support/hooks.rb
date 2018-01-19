@@ -6,7 +6,7 @@ Before('@events') do
   sign_in_page.click_sign_in_button
 end
 
-Before('@dothis', '~@notthis') do
+Before('@subscribe') do
   nav_bar.click_menu
   menu_bar.menu_subscriptions
   if subscription_page.check_london_coaches_button
