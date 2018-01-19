@@ -11,4 +11,13 @@ class Profile
     find("h2", :text => words)
   end
 
+  def find_subscription
+    find("a", :text => "Students (Brighton)")
+  end
+
+  def find_not_subscribed
+    find("label", :text => "You are not subscribed to any chapters")
+  end
+
+
 end
