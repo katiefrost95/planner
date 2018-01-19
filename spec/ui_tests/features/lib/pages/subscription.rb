@@ -5,6 +5,7 @@ class SubscriptionPage
 
   COACHES_LONDON_BUTTON_ID = 'london-coaches'
   STUDENTS_BRIGHTON_BUTTON_ID = 'brighton-students'
+  STUDENTS_LONDON_ID = 'london-students'
 
   def find_london_coaches_button
     find(:id, COACHES_LONDON_BUTTON_ID)
@@ -23,6 +24,10 @@ class SubscriptionPage
 
   def click_brighton_subscribe
     find(:id, STUDENTS_BRIGHTON_BUTTON_ID).click
+  end
+
+  def click_london_students
+    find(:id, STUDENTS_LONDON_ID).click
   end
 
 
