@@ -46,4 +46,8 @@ class HomePage
     find_link("London").click
   end
 
+  def click_blogs_link
+    find_link("Blog").click
+  end
+
 end
