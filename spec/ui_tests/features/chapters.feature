@@ -65,10 +65,19 @@ Feature: chapters
   # |  modi57            |
 
 
-  Scenario: As a user not logged in (but with an account and logged into github) I access chapters links in homepage and sign up as a student.
+  # Scenario: As a user not logged in (but with an account and logged into github) I access chapters links in homepage and sign up as a student.
+  # 	Given I am on the codebar homepage
+  # 	When I click on a chapter
+  # 	And I click on sign up
+  # 	And choose to sign up as a student
+  #   And I authorize codebar to access my github
+  # 	Then the website will sign me in and take me to the dashboard
+
+
+  Scenario: As a user not logged in (but with an account and logged into github), I can access chapters links in homepage and sign up as a coach.
   	Given I am on the codebar homepage
   	When I click on a chapter
   	And I click on sign up
-  	And choose to sign up as a student
+  	And I click sign up as a coach
     And I authorize codebar to access my github
   	Then the website will sign me in and take me to the dashboard
