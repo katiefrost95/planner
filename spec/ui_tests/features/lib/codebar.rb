@@ -94,4 +94,8 @@ module CodebarSite
     Footer.new
   end
 
+  def donate
+    Donate.new
+  end
+
 end

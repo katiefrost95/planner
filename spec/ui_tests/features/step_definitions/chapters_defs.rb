@@ -1,12 +1,12 @@
-When(/^I click on the chapters (.*)$/) do |chapters|
+When(/^I press link to the chapter (.*)$/) do |chapters|
   homepage_page.click_chapter(chapters)
 end
 
-Then("expect page to be that chapter")do
-  expect(chapters.find_sign_up_link).to be true
+Then(/^expect page to be the chapter (.*)$/) do |url|
+  expect(current_url).to eq (url)
 end
 
-When("I click on a chapter") do
+When("I choose a chapter") do
   homepage_page.click_London_chapter
 end
 

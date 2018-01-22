@@ -18,7 +18,7 @@ Before('@subscribe') do
   end
 end
 
-After('~@tutorials','~@sign_out', '~@chapters_sign_out', '~@blogs', '~@footer') do
+After('~@tutorials','~@sign_out', '~@chapters_sign_out', '~@blogs', '~@footer', '~@host_workshop', '~@navbar', '~@donate') do
   nav_bar.click_menu
   homepage_page.click_log_out
   github_logout.visit_github
