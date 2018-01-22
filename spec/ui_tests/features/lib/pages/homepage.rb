@@ -31,8 +31,13 @@ class HomePage
   end
 
   def click_host_a_workshop
-    find_link("Host a workshop").click
+    email window = window_opened_by do
+      find_link("Host a workshop").click  
+    end
   end
+
+  def email_visible?
+
 
   def click_events_link
     find_link("Events").click
