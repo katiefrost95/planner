@@ -14,8 +14,8 @@ Scenario: As a user without an account I should be able to sign up as a coach fr
 	And I authorize codebar to access my github
 	Then I should be redirected to my dashboard
 
-@host_workshop
-Scenario: As a user I should be able to host a workshop
-	Given I am on the codebar homepage
-	When I click on host a workshop
-	Then A pop up window should appear
+# @host_workshop
+# Scenario: As a user I should be able to host a workshop
+# 	Given I am on the codebar homepage
+# 	When I click on host a workshop
+# 	Then A pop up window should appear
