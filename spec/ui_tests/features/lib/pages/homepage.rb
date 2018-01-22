@@ -38,4 +38,12 @@ class HomePage
     find_link("Events").click
   end
 
+  def click_chapter(chapter_name)
+    find_link(chapter_name).click
+  end
+
+  def click_London_chapter
+    find_link("London").click
+  end
+
 end

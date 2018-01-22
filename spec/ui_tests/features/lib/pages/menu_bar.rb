@@ -23,5 +23,9 @@ class MenuBar
     find_link("Update your details").click
   end
 
+  def job_listing
+    find_link("List a job").click
+  end
+
 
 end

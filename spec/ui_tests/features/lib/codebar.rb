@@ -11,6 +11,9 @@ require_relative 'pages/subscription'
 require_relative 'pages/invitations'
 require_relative 'pages/workshops_page'
 require_relative 'pages/attend_event_page'
+require_relative 'pages/job_listing'
+require_relative 'pages/job_listing_preview_page'
+require_relative 'pages/chapters'
 
 module CodebarSite
 
@@ -74,5 +77,16 @@ module CodebarSite
     AttendEventPage.new
   end
 
+  def job_listing
+    JobListing.new
+  end
+
+  def job_listing_preview_page
+    JobListingPreviewPage.new
+  end
+
+  def chapters
+    Chapters.new
+  end
 
 end
