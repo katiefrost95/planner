@@ -4,11 +4,11 @@ Feature: chapters
 Scenario Outline: As a user logged in I can access the chapters links from the homepage
 	Given I am on the codebar homepage
 	When I click on the chapters <chapters>
-  Then expect page to be that chapter
+  Then expect page to be that chapter <url>
 
 
   Examples:
-  |  chapters          |
+  |  chapters          | 
   |  London            |
   |  Brighton          |
   |  Cambridge         |

@@ -14,6 +14,7 @@ require_relative 'pages/attend_event_page'
 require_relative 'pages/job_listing'
 require_relative 'pages/job_listing_preview_page'
 require_relative 'pages/chapters'
+require_relative 'pages/footer'
 
 module CodebarSite
 
@@ -87,6 +88,10 @@ module CodebarSite
 
   def chapters
     Chapters.new
+  end
+
+  def footer
+    Footer.new
   end
 
 end

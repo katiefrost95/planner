@@ -14,11 +14,7 @@ Before('@subscribe') do
   end
 end
 
-<<<<<<< HEAD
-After('~@tutorials','~@sign_out') do
-=======
 After('~@tutorials','~@sign_out', '~@chapters_sign_out', '~@blogs', '~@footer') do
->>>>>>> bb635da10fe5a9614edc2d5b6568248ef31c09bf
   nav_bar.click_menu
   homepage_page.click_log_out
   github_logout.visit_github
