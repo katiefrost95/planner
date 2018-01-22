@@ -89,4 +89,8 @@ module CodebarSite
     Chapters.new
   end
 
+  def donate
+    Donate.new
+  end
+
 end

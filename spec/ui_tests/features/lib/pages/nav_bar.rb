@@ -5,6 +5,7 @@ class NavBar
 
   MENU_ID = "profile"
 
+
   def click_sign_in_link
     find_link('Sign in').click
   end
@@ -27,6 +28,14 @@ class NavBar
 
   def click_event_link
     click_link("Events")
+  end
+
+  def click_nav_link(link_name)
+    find_link(link_name).click
+  end
+
+  def click_donate
+    find_link("Donate").click
   end
 
 end
