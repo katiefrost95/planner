@@ -6,6 +6,7 @@ class GithubLogout
 
   GITHUB_HOMEPAGE = 'https://github.com/'
   PROFILE_DROPDOWN = 'user-links'
+  AUTHORIZE_BUTTON_ID = 'js-oauth-authorize-btn'
 
 
   def visit_github

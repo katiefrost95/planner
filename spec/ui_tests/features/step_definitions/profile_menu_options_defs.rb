@@ -45,9 +45,10 @@ Then("I should successfully unsubscribe") do
     nav_bar.click_menu
     menu_bar.menu_subscriptions
     subscription_page.click_london_coaches_subscribe_button
+    homepage_page.visit_homepage
+    nav_bar.click_menu
+    menu_bar.menu_profile
   end
-  nav_bar.click_menu
-  menu_bar.menu_profile
   if profile.find_subscribed_london_student
     homepage_page.visit_homepage
     nav_bar.click_menu

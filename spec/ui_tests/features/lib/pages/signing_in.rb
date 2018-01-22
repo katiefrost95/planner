@@ -20,9 +20,12 @@ class SignIn
     click_button("Sign in")
   end
 
-  def click_authorize_button_displayed
+  def authorize_button_displayed
     find(:id, AUTHORIZE_BUTTON_ID).visible?
   end
+
+
+
 
   def click_authorize_button
     click_button("1")
