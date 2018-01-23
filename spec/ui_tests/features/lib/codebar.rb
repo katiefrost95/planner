@@ -15,6 +15,7 @@ require_relative 'pages/job_listing'
 require_relative 'pages/job_listing_preview_page'
 require_relative 'pages/chapters'
 require_relative 'pages/footer'
+require_relative 'pages/meeting_page'
 
 module CodebarSite
 
@@ -78,6 +79,12 @@ module CodebarSite
     AttendEventPage.new
   end
 
+<<<<<<< HEAD
+  def meeting_page
+    MeetingPage.new
+  end
+
+=======
   def job_listing
     JobListing.new
   end
@@ -97,5 +104,6 @@ module CodebarSite
   def donate
     Donate.new
   end
+>>>>>>> merge_conflicts_branch
 
 end

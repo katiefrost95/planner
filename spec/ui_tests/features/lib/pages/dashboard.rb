@@ -15,4 +15,8 @@ class Dashboard
     click_link('Event')
   end
 
+  def click_attending_meeting
+    click_link('Meeting')
+  end
+
 end

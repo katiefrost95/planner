@@ -34,4 +34,8 @@ class Events
     click_link('public listing')
   end
 
+  def click_on_a_meeting
+    click_link('Meeting')
+  end
+
 end
