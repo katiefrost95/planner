@@ -20,20 +20,36 @@ Feature: Events
     And I click RSVP as a coach
     Then I should receive the corresponding attend event message
 
+  Scenario: As a coach already signed in I should be able to access events page and choose to attend a meeting
+    Given I am on the codebar homepage
+    And I am subscribed as a coach to one of the locations
+    When I click on events link
+    And I click on a meeting
+    And I click attend
+    Then I should receive the message for successfully attending a meeting
+
   Scenario: As a coach already signed in I should be able to access a workshop from my dashboard and choose to no longer attend
-	  Given I am on the codebar homepage
-	  And I am subscribed as a coach to one of the locations
-	  When I go to my dashboard
+    Given I am on the codebar homepage
+    And I am subscribed as a coach to one of the locations
+    When I go to my dashboard
     And I click on a workshop I am set to attend
-	  And I click the manage your invitation button
-	  And I click I can no longer attend button
-	  Then I should receive the corresponding message for cancelling an event
+    And I click the manage your invitation button
+    And I click I can no longer attend button
+    Then I should receive the corresponding message for cancelling an event
 
   Scenario: As a coach already signed in I should be able to access an event from my dashboard and choose to no longer attend
-	  Given I am on the codebar homepage
-	  And I am subscribed as a coach to one of the locations
-	  When I go to my dashboard
-	  And I click on an event I am set to attend
-	  And I click the cancel my spot button
-	  And I click ok on the alert
-	  Then I should receive the corresponding message for cancelling an event
+    Given I am on the codebar homepage
+    And I am subscribed as a coach to one of the locations
+    When I go to my dashboard
+    And I click on an event I am set to attend
+    And I click the cancel my spot button
+    And I click ok on the alert
+    Then I should receive the corresponding message for cancelling an event
+
+  Scenario: As a coach already signed in I should be able to access events page and choose to cancel a meeting I am set to attend
+    Given I am on the codebar homepage
+    And I am subscribed as a coach to one of the locations
+    When I go to my dashboard
+    And I click on a meeting I am set to attend
+    And I click can’t make it anymore link
+    Then I should receive the message for cancelling a meeting
