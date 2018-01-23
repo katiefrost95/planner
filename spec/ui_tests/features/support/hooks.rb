@@ -18,6 +18,21 @@ Before('@subscribe') do
   end
 end
 
+Before('@unsubscribe') do
+  homepage_page.visit_homepage
+  nav_bar.click_menu
+  menu_bar.menu_subscriptions
+  if subscription_page.check_brighton_students_button
+    subscription_page.click_brighton_subscribe
+  end
+  if subscription_page.check_london_students_button
+    subscription_page.click_london_students
+  end
+  if subscription_page.check_london_coaches_button
+    subscription_page.click_london_coaches_subscribe_button
+  end
+end
+
 After('~@tutorials','~@sign_out', '~@chapters_sign_out', '~@blogs', '~@footer', '~@host_workshop', '~@navbar', '~@donate') do
   nav_bar.click_menu
   homepage_page.click_log_out

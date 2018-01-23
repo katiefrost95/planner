@@ -38,4 +38,8 @@ class NavBar
     find_link("Donate").click
   end
 
+  def click_codebar_icon
+    find(:css, 'div.brand').click
+  end
+
 end

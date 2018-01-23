@@ -3,7 +3,7 @@ require 'capybara/dsl'
 class HomePage
   include Capybara::DSL
 
-  HOMEPAGE_URL = 'localhost:3000'
+  HOMEPAGE_URL = 'http://localhost:3000'
   TUTORIAL_LINK_NAME = 'Tutorials'
 
   def visit_homepage
