@@ -21,7 +21,7 @@ class Invitations
     find_link("Get your ticket").click
   end
 
-  def click_attend_workshop
+  def click_attend
     click_link('Attend')
   end
 
