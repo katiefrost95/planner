@@ -6,6 +6,7 @@ class SubscriptionPage
   COACHES_LONDON_BUTTON_ID = 'london-coaches'
   STUDENTS_BRIGHTON_BUTTON_ID = 'brighton-students'
   STUDENTS_LONDON_ID = 'london-students'
+  STUDENTS_LONDON_BUTTON_ID = 'london-students'
 
   def find_london_coaches_button
     find(:id, COACHES_LONDON_BUTTON_ID)
@@ -28,6 +29,21 @@ class SubscriptionPage
 
   def click_london_students
     find(:id, STUDENTS_LONDON_ID).click
+  end
+
+  def find_london_students_button
+    find(:id, STUDENTS_LONDON_BUTTON_ID)
+  end
+
+  def check_london_students_button
+    if find_london_students_button.value == 'Subscribe'
+      return true
+    end
+    return false
+  end
+
+  def click_london_students_button
+    find_london_students_button.click
   end
 
 

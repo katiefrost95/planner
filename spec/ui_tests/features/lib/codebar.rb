@@ -79,12 +79,10 @@ module CodebarSite
     AttendEventPage.new
   end
 
-<<<<<<< HEAD
   def meeting_page
     MeetingPage.new
   end
 
-=======
   def job_listing
     JobListing.new
   end
@@ -104,6 +102,5 @@ module CodebarSite
   def donate
     Donate.new
   end
->>>>>>> merge_conflicts_branch
 
 end

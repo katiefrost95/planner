@@ -12,9 +12,15 @@ end
 
 Before('@unattend_workshop') do
   nav_bar.click_menu
+  menu_bar.menu_subscriptions
+  if subscription_page.check_london_students_button
+    subscription_page.click_london_students_button
+  end
+  nav_bar.click_menu
   menu_bar.menu_invitations
-  if invitations.attending_visible? == true
+  if invitations.check_find_attending_button
     invitations.click_attending
+    invitations.click_cannot_attend
   end
 end
 
