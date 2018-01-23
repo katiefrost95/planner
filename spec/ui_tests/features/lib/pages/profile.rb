@@ -28,7 +28,11 @@ class Profile
   end
 
   def find_london_coaches
-    find("a", :text => "Coaches (London)").visible?
+    if find("a", :text => "Coaches (London)").visible?
+      return true
+    end
+    return false
+
   end
 
 

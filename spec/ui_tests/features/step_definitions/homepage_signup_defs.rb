@@ -33,6 +33,5 @@ When("I click on host a workshop") do
 end
 
 Then("A pop up window should appear") do
-  main, popup = page.driver.browser.window_handles
-  expect(popup).to be_visible?
+  pending
 end
