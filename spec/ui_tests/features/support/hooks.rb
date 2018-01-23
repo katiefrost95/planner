@@ -10,19 +10,6 @@ Before('@hooks') do
   end
 end
 
-# After('@unattend_workshop') do
-#   nav_bar.click_menu
-#   menu_bar.menu_invitations
-#   invitations.click_attending
-#   invitations.click_cannot_attend
-#   sleep 3
-#   nav_bar.click_menu
-#   homepage_page.click_log_out
-#   github_logout.visit_github
-#   github_logout.click_dropdown_profile
-#   github_logout.click_logout
-# end
-
 Before('@subscribe') do
   nav_bar.click_menu
   menu_bar.menu_subscriptions
