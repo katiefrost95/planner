@@ -18,6 +18,17 @@ class SubscriptionPage
     return false
   end
 
+  def find_london_students_button
+    find(:id, STUDENTS_LONDON_ID)
+  end
+
+  def check_london_students_button
+    if find_london_students_button.value == 'Subscribe'
+      return true
+    end
+    return false
+  end
+
   def click_london_coaches_subscribe_button
     find_london_coaches_button.click
   end

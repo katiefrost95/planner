@@ -3,7 +3,8 @@ require 'capybara/dsl'
 class Events
   include Capybara::DSL
 
-  CLICK_DROPBOX="session_invitation_note_chosen"
+  CLICK_DROPBOX = "session_invitation_note_chosen"
+  CHOSEN_DROPBOX = "note_chosen"
 
   def click_on_a_workshop
     click_link("Workshop")
@@ -21,9 +22,20 @@ class Events
     find(:id, CLICK_DROPBOX).click
   end
 
+  def click_chosen_dropdown
+    find(:id, CHOSEN_DROPBOX).click
+  end
 
   def click_dropdown_option
     find('li[data-option-array-index="1"]').click
+  end
+
+  def change_dropdown_option
+    find('li[data-option-array-index="2"]').click
+  end
+
+  def click_update_note
+    click_button('Update note')
   end
 
   def click_attend_button

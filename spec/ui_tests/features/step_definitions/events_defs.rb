@@ -1,4 +1,9 @@
 And("I am subscribed as a coach to one of the locations") do
+  nav_bar.click_menu
+  menu_bar.menu_subscriptions
+  if subscription_page.check_london_coaches_button
+    subscription_page.click_london_coaches_subscribe_button
+  end
 end
 
 When("I click on events link") do
@@ -13,7 +18,7 @@ And("I click attend as coach") do
   workshops_page.click_attend_as_coach_button
 end
 
-And("I click attend button") do
+And("I click attend workshop button") do
   invitations.click_attend
 end
 
@@ -87,4 +92,42 @@ end
 
 Then("I should receive the message for cancelling a meeting") do
   expect(meeting_page.find_response_message).to include('Thanks for letting us know you can\'t make it.')
+end
+
+Given("I am subscribed as a student to one of the locations") do
+  nav_bar.click_menu
+  menu_bar.menu_subscriptions
+  if subscription_page.check_london_students_button
+    subscription_page.click_london_students
+  end
+end
+
+And("I click attend as student") do
+  events.click_attend_as_student
+end
+
+And("I select what I intend to work on") do
+  events.click_dropdown
+  events.click_dropdown_option
+end
+
+And("I click RSVP as a student") do
+  invitations.click_rsvp
+end
+
+And("I click attend button") do
+  events.click_attend_button
+end
+
+And("I change what I am going to work on") do
+  events.click_chosen_dropdown
+  events.change_dropdown_option
+end
+
+And("I click update note") do
+  events.click_update_note
+end
+
+Then("I should receive the corresponding update workshop message") do
+  expect(invitations.find_response_message).to include('Successfully updated note.')
 end
