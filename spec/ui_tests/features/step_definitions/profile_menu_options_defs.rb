@@ -116,3 +116,9 @@ end
 Then("I receive a message confirming my attendance") do
   expect(invitations.find_cannot_attend).to be true
 end
+
+Then("I can no longer attend") do
+  expect(invitations.find_cannot_attend).to be true
+  invitations.click_cannot_attend
+  expect(invitations.find_link_attend).to be true
+end

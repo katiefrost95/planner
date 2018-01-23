@@ -36,6 +36,13 @@ Scenario: As a user I can RSVP to my invitations
   And I click attending to the workshop
   Then I receive a message confirming my attendance
 
+Scenario: As a user I can not attend my invitations
+	Given I am logged in
+	When  I click on menu
+	And I click on invitations
+	And I click attending to the workshop
+	Then I can no longer attend
+
 # Scenario: As a user I can successfully manage my subscriptions
 # 	Given I am logged in
 # 	When I click on menu
