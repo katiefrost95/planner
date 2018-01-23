@@ -1,9 +1,4 @@
 And("I am subscribed as a coach to one of the locations") do
-  nav_bar.click_menu
-  menu_bar.menu_subscriptions
-  if subscription_page.check_london_coaches_button
-    subscription_page.click_london_coaches_subscribe_button
-  end
 end
 
 When("I click on events link") do
@@ -94,12 +89,7 @@ Then("I should receive the message for cancelling a meeting") do
   expect(meeting_page.find_response_message).to include('Thanks for letting us know you can\'t make it.')
 end
 
-Given("I am subscribed as a student to one of the locations") do
-  nav_bar.click_menu
-  menu_bar.menu_subscriptions
-  if subscription_page.check_london_students_button
-    subscription_page.click_london_students
-  end
+And("I am subscribed as a student to one of the locations") do
 end
 
 And("I click attend as student") do

@@ -10,6 +10,23 @@ Before('@hooks') do
   end
 end
 
+Before('@subscribecoach') do
+  nav_bar.click_menu
+  menu_bar.menu_subscriptions
+  if subscription_page.check_london_coaches_subscribe
+    sleep 5
+    subscription_page.click_london_coaches_subscribe_button
+  end
+end
+
+Before('@subscribestudent') do
+  nav_bar.click_menu
+  menu_bar.menu_subscriptions
+  if subscription_page.check_london_students_subscribe
+    subscription_page.click_london_students
+  end
+end
+
 Before('@unattend_workshop') do
   nav_bar.click_menu
   menu_bar.menu_subscriptions
