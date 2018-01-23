@@ -14,6 +14,10 @@ And("I authorize codebar to access my github") do
   sign_in_page.github_username("fake_github123@hotmail.com")
   sign_in_page.github_password("Thisisfake123")
   sign_in_page.click_sign_in_button
+  sleep 1
+  if current_url != "http://localhost:3000/dashboard"
+    sign_in_page.click_authorize_button
+  end
 end
 
 Then("I should be redirected to my dashboard") do
@@ -28,10 +32,6 @@ And("I click the sign up as a coach button") do
   new_member_page.click_sign_up_as_coach
 end
 
-When("I click on host a workshop") do
+Then("I can click on host a workshop") do
   homepage_page.click_host_a_workshop
-end
-
-Then("A pop up window should appear") do
-  pending
 end

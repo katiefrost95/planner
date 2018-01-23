@@ -12,3 +12,9 @@ Scenario Outline: As a user I should be able to access the navbar links
   | Sponsors | http://localhost:3000/sponsors       |
   | Jobs     | http://localhost:3000/jobs           |
   | Coaches  | http://localhost:3000/coaches        |
+
+Scenario: As a user when I click the codebar icon I should be redirected to the homepage
+
+	Given I am on the codebar homepage
+	When I click on the codebar icon
+	Then I should be redirected to the homepage

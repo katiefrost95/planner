@@ -13,12 +13,20 @@ class Invitations
     find_link("Attended").visible?
   end
 
+  def find_rsvp_button
+    find_link("RSVP").visible?
+  end
+
   def click_rsvp
     find_link("RSVP").click
   end
 
   def click_get_ticket
     find_link("Get your ticket").click
+  end
+
+  def find_link_attend
+    find('input[name="commit"]').visible?
   end
 
   def click_attend
@@ -35,6 +43,10 @@ class Invitations
 
   def find_cannot_attend
     find_link("I can no longer attend").visible?
+  end
+
+  def click_cannot_attend
+    click_link("I can no longer attend")
   end
 
   def click_manage_invitation_button

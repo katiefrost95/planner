@@ -10,6 +10,11 @@ Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app,:browser => :chrome)
 end
 
+# Capybara.register_driver :selenium do |app|
+#   browser = (ENV['browser'] || 'firefox').to_sym
+#   Capybara::Selenium::Driver.new(app, :browser => browser)
+# end
+
 Capybara.configure do |config|
   config.ignore_hidden_elements = false #to ensure that all hidden elements on a page are recorded/available
   config.default_max_wait_time= 10 #wait time for asynchronus processes to finsh

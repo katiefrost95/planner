@@ -37,6 +37,10 @@ class UpdateDetails
     click_button("Save")
   end
 
+  def find_error_message
+    find(:css, 'span.error')
+  end
+
 
 
 end
