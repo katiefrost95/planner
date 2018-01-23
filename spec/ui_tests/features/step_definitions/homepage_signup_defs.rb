@@ -32,10 +32,6 @@ And("I click the sign up as a coach button") do
   new_member_page.click_sign_up_as_coach
 end
 
-When("I click on host a workshop") do
+Then("I can click on host a workshop") do
   homepage_page.click_host_a_workshop
-end
-
-Then("A pop up window should appear") do
-  pending
 end
