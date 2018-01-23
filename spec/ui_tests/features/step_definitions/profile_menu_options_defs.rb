@@ -68,6 +68,14 @@ When("I click save") do
   update_details.click_save
 end
 
+And("I fill in my details incorrectly") do
+  update_details.member_name_input('')
+end
+
+Then("I should get an error message") do
+
+end
+
 Then("my details should be successfully updated") do
   profile.find_words_on_page('Nigel Noodle')
 end

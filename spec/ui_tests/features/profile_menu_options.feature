@@ -13,13 +13,21 @@ Scenario: As a user I can view my profile.
 	And I click on profile
 	Then I should be able view my profile details.
 
+Scenario: As a user I can update my details
+    Given I am logged in
+    When I click on menu
+    And I click update my details
+    And I fill in my details with the info I want
+    And I click save
+    Then my details should be successfully updated
+
 Scenario: As a user, if I update my details wrong I should stay on the page
 	Given I am logged in
 	When I click on menu
 	And I click update my details
 	And I fill in my details incorrectly
 	When I click save
-	Then I should remain on the edit details page
+	Then I should get an error message
 
 Scenario: As a user I can view my invitations
 	Given I am logged in
