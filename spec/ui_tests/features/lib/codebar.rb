@@ -11,6 +11,7 @@ require_relative 'pages/subscription'
 require_relative 'pages/invitations'
 require_relative 'pages/workshops_page'
 require_relative 'pages/attend_event_page'
+require_relative 'pages/meeting_page'
 
 module CodebarSite
 
@@ -72,6 +73,10 @@ module CodebarSite
 
   def attend_event_page
     AttendEventPage.new
+  end
+
+  def meeting_page
+    MeetingPage.new
   end
 
 

@@ -14,7 +14,7 @@ And("I click attend as coach") do
 end
 
 And("I click attend button") do
-  invitations.click_attend_workshop
+  invitations.click_attend
 end
 
 Then("I should receive the corresponding attend workshop message") do
@@ -63,4 +63,28 @@ end
 
 Then("I should receive the corresponding message for cancelling an event") do
   expect(attend_event_page.find_response_message).to include('We are so sad you can\'t make it, but thanks for letting us know')
+end
+
+And("I click on a meeting") do
+  events.click_on_a_meeting
+end
+
+And("I click attend") do
+  invitations.click_attend
+end
+
+Then("I should receive the message for successfully attending a meeting") do
+  expect(meeting_page.find_response_message).to include('Your RSVP was successful. We look forward to seeing you at the Monthly!')
+end
+
+And("I click on a meeting I am set to attend") do
+  dashboard.click_attending_meeting
+end
+
+And("I click can’t make it anymore link") do
+  meeting_page.click_cancel_meeting_link
+end
+
+Then("I should receive the message for cancelling a meeting") do
+  expect(meeting_page.find_response_message).to include('Thanks for letting us know you can\'t make it.')
 end
