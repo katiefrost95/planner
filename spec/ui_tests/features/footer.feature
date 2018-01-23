@@ -20,3 +20,23 @@ Scenario Outline: As a user I should be able to access the links to the footer a
 	| Events 						 | http://localhost:3000/events |
 	| Jobs							 | http://localhost:3000/jobs |
 	| Donate						 | http://localhost:3000/donations/new |
+
+Scenario: As a user I can click the slack icon on the footer
+	Given I am on the codebar homepage
+	When I click the slack icon on the footer
+	Then I should be redirected to the slack page
+
+Scenario: As a user I can click the github icon on the footer
+	Given I am on the codebar homepage
+	When I click the github icon on the footer
+	Then I should be redirected to the github page
+
+Scenario: As a user I can click the twitter icon on the footer
+	Given I am on the codebar homepage
+	When I click the twitter icon on the footer
+	Then I should be redirected to the twitter page
+
+Scenario: As a user I can click the facebook icon on the footer
+	Given I am on the codebar homepage
+	When I click the facebook icon on the footer
+	Then I should be redirected to the facebook page

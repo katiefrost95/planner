@@ -1,3 +1,4 @@
+@hooks
 Feature: Job Listing
 
   Scenario: As a user I can successfully create a job listing

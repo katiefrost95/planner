@@ -11,8 +11,30 @@ class SubscriptionPage
     find(:id, COACHES_LONDON_BUTTON_ID)
   end
 
+  def find_brighton_students_button
+    find(:id, STUDENTS_BRIGHTON_BUTTON_ID)
+  end
+
+  def find_london_students_button
+    find(:id, STUDENTS_LONDON_ID)
+  end
+
   def check_london_coaches_button
-    if find_london_coaches_button.value == 'Subscribe'
+    if find_london_coaches_button.value == 'Subscribed'
+      return true
+    end
+    return false
+  end
+
+  def check_brighton_students_button
+    if find_brighton_students_button.value == 'Subscribed'
+      return true
+    end
+    return false
+  end
+
+  def check_london_students_button
+    if find_london_students_button.value == 'Subscribed'
       return true
     end
     return false
