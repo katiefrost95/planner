@@ -26,25 +26,26 @@ Feature: Menu Bar
 # 	When I click on menu
 # 	And I click on invitations
 # 	Then I should be able to view upcoming workshops or workshops attended
+
+@unattend_workshop
+Scenario: As a user I can RSVP to my invitations
+  Given I am logged in
+  And I am invited to an event
+  And I click on menu
+  When I click on invitations
+  And I click attending to the workshop
+  Then I receive a message confirming my attendance
+
+# Scenario: As a user I can successfully manage my subscriptions
+# 	Given I am logged in
+# 	When I click on menu
+# 	And I click on manage subscriptions
+# 	And I click to subscribe to a city of my choice as a student
+# 	Then I should successfully subscribe
 #
-# Scenario: As a user I can RSVP to my invitations
-#     Given I am logged in
-#     And I am invited to an event
-#     And I click on menu
-#     When I click on invitations
-#     And I click attending to the workshop
-#     Then I receive a message confirming my attendance
-
-Scenario: As a user I can successfully manage my subscriptions
-	Given I am logged in
-	When I click on menu
-	And I click on manage subscriptions
-	And I click to subscribe to a city of my choice as a student
-	Then I should successfully subscribe
-
-Scenario: As a user I can unsubscribe from a city
-	Given I am logged in
-	When I click on menu
-	And I click on manage subscriptions
-	And I click to subscribe to a city of my choice as a student
-	Then I should successfully unsubscribe
+# Scenario: As a user I can unsubscribe from a city
+# 	Given I am logged in
+# 	When I click on menu
+# 	And I click on manage subscriptions
+# 	And I click to subscribe to a city of my choice as a student
+# 	Then I should successfully unsubscribe

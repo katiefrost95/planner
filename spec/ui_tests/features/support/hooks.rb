@@ -10,6 +10,14 @@ Before('@hooks') do
   end
 end
 
+Before('@unattend_workshop') do
+  nav_bar.click_menu
+  menu_bar.menu_invitations
+  if invitations.attending_visible? == true
+    invitations.click_attending
+  end
+end
+
 Before('@subscribe') do
   nav_bar.click_menu
   menu_bar.menu_subscriptions

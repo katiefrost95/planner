@@ -29,6 +29,10 @@ class Invitations
     page.body
   end
 
+  def attending_visible?
+    find_link("Attending").visible?
+  end
+
   def click_attending
     click_link("Attending")
   end
@@ -36,6 +40,9 @@ class Invitations
   def find_cannot_attend
     find_link("I can no longer attend").visible?
   end
+
+  def click_cannot_attend
+    find_link("I can no longer attend").click
 
   def click_manage_invitation_button
     click_link("Manage your invitation")
