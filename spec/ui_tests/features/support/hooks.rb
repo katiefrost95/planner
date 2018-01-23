@@ -18,6 +18,16 @@ Before('@subscribe') do
   end
 end
 
+Before('@unattend_workshop') do
+  nav_bar.click_menu
+  menu_bar.menu_subscriptions
+  if subscription_page.check_london_students_button
+    puts('subscribed')
+  else
+    subscription_page.click_london_students_button
+  end
+end
+
 Before('@unsubscribe') do
   homepage_page.visit_homepage
   nav_bar.click_menu

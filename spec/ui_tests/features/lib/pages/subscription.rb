@@ -58,7 +58,7 @@ class SubscriptionPage
   end
 
   def check_london_students_button
-    if find_london_students_button.value == 'Subscribe'
+    if find_london_students_button.value == 'Subscribed'
       return true
     end
     return false
