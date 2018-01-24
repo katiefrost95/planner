@@ -20,8 +20,8 @@ Capybara.configure do |config|
   config.default_max_wait_time= 10 #wait time for asynchronus processes to finsh
   config.match = :prefer_exact #this setting is to ensure Capybara has specific matching rather than fuzzy logic
   config.default_driver = :chrome # ensures chrome is the default driver
-  config.default_driver = :firefox
-  # config.default_driver = :safari
+  # config.default_driver = :firefox
+
 end
 
 World(CodebarSite)
