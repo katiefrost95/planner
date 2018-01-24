@@ -10,7 +10,7 @@ Then("I should be able view upcoming workshops in subscribed cities.") do
   dashboard.find_name_on_dashboard
 end
 
-When("I click on profile") do
+And("I click on profile") do
   menu_bar.menu_profile
 end
 
@@ -64,7 +64,7 @@ And("I fill in my details with the info I want") do
   update_details.member_twitter_input('twitter')
 end
 
-When("I click save") do
+And("I click save") do
   update_details.click_save
 end
 

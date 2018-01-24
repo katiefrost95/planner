@@ -7,7 +7,6 @@ class SignIn
   GITHUB_PASSWORD = "password"
   AUTHORIZE_BUTTON_ID = 'js-oauth-authorize-btn'
 
-
   def github_username(username)
     fill_in(GITHUB_USERNAME, with: username)
   end

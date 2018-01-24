@@ -2,7 +2,7 @@ When("I navigate to the list a job page") do
   menu_bar.job_listing
 end
 
-When("I fill out the details with the correct information.") do
+And("I fill out the details with the correct information.") do
   job_listing.job_title("title")
   job_listing.job_company("company")
   job_listing.job_location("location")
@@ -23,7 +23,7 @@ Then("I should successfully submit my job listing")do
   expect(current_url).to eq 'http://localhost:3000/'
 end
 
-When("I do not fill in all the required information") do
+And("I do not fill in all the required information") do
   job_listing.job_company("company")
   job_listing.job_location("location")
   job_listing.job_description("This is a description")

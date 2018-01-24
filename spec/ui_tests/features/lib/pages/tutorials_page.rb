@@ -18,5 +18,4 @@ class TutorialsPage
     find_link(BACK_TO_TUTORIALS).click
   end
 
-
 end

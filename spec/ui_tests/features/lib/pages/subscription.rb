@@ -93,5 +93,4 @@ class SubscriptionPage
     find_london_students_button.click
   end
 
-
 end

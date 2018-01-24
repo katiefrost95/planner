@@ -2,6 +2,7 @@ require 'capybara/dsl'
 
 class UpdateDetails
   include Capybara::DSL
+
   MEMBER_NAME_INPUT = 'member_name'
   MEMBER_PRONOUNS_INPUT = 'member_pronouns'
   MEMBER_EMAIL_INPUT = 'member_email'
@@ -40,7 +41,5 @@ class UpdateDetails
   def find_error_message
     find(:css, 'span.error')
   end
-
-
 
 end

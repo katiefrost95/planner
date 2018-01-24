@@ -11,5 +11,4 @@ class NewMember
     find_link("Sign up as a coach").click
   end
 
-
 end
