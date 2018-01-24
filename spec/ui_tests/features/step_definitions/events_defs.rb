@@ -61,8 +61,12 @@ end
 And("I click ok on the alert") do
 end
 
-Then("I should receive the corresponding message for cancelling an event") do
+Then("I should receive the corresponding message for cancelling a workshop") do
   expect(attend_event_page.find_response_message).to include('We are so sad you can\'t make it, but thanks for letting us know')
+end
+
+Then("I should see the cancel spot button change") do
+  expect(invitations.find_rsvp_button).to be_truthy
 end
 
 And("I click on a meeting") do

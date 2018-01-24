@@ -35,7 +35,7 @@ Feature: Events
     And I click on a workshop I am set to attend
     And I click the manage your invitation button
     And I click I can no longer attend button
-    Then I should receive the corresponding message for cancelling an event
+    Then I should receive the corresponding message for cancelling a workshop
 
   Scenario: As a coach already signed in I should be able to access an event from my dashboard and choose to no longer attend
     Given I am on the codebar homepage
@@ -44,7 +44,7 @@ Feature: Events
     And I click on an event I am set to attend
     And I click the cancel my spot button
     And I click ok on the alert
-    Then I should receive the corresponding message for cancelling an event
+    Then I should see the cancel spot button change
 
   Scenario: As a coach already signed in I should be able to access events page and choose to cancel a meeting I am set to attend
     Given I am on the codebar homepage
@@ -91,7 +91,7 @@ Feature: Events
     And I click on a workshop I am set to attend
     And I click the manage your invitation button
     And I click I can no longer attend button
-    Then I should receive the corresponding message for cancelling an event
+    Then I should receive the corresponding message for cancelling a workshop
 
   Scenario: As a student already signed in I should be able to access an event from my dashboard and choose to no longer attend
     Given I am on the codebar homepage
@@ -100,4 +100,4 @@ Feature: Events
     And I click on an event I am set to attend
     And I click the cancel my spot button
     And I click ok on the alert
-    Then I should receive the corresponding message for cancelling an event
+    Then I should see the cancel spot button change
