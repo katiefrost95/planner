@@ -14,7 +14,6 @@ Before('@subscribecoach') do
   nav_bar.click_menu
   menu_bar.menu_subscriptions
   if subscription_page.check_london_coaches_subscribe
-    sleep 5
     subscription_page.click_london_coaches_subscribe_button
   end
 end

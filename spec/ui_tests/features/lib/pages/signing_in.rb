@@ -24,9 +24,6 @@ class SignIn
     click_button(:id, AUTHORIZE_BUTTON_ID)
   end
 
-
-
-
   def click_authorize_button
     click_button("1")
   end

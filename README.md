@@ -129,7 +129,7 @@ If there is something else that you would like to work on, open an issue first s
 
 ### Running the UI tests
 
-To improve test coverage we've included UI tests into the planner testing the user journey through the website. We used cucumber to do this and have enabled the tests to run for browsers chrome and Firefox. The browser default is set to chrome, to change it to Firefox go into the env file, uncomment out the chrome and comment in the Firefox default. The UI tests are located in spec/ui_tests.
+To improve test coverage we've included UI tests into the planner testing the user journey through the website. We used cucumber to do this and have enabled the tests to run for browsers chrome and Firefox. The UI tests are located in spec/ui_tests.
 Tests are written using Cucumber. The documentation can be found here https://cucumber.io/docs.
 
 To run all the tests use the command:
@@ -151,8 +151,9 @@ Tests can be run in either Firefox or Chrome. To change browsers:
 ```bash
 cd spec/ui_tests/support
 ```
+### Changing the Default Browser
 
-In env.rb you will find the following code
+In env.rb you will find the following code, the default browser is currently set to chrome:
 
 ```ruby
 Capybara.configure do |config|
@@ -163,4 +164,4 @@ Capybara.configure do |config|
   # config.default_driver = :firefox
 end
 ```
-Uncomment the default_driver for the browser you want to run your tests in, and comment out the other default_driver
+To change the default browser to Firefox uncomment the default_driver for the browser you want to run your tests in, and comment out the other default_driver
