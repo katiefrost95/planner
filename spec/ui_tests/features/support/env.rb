@@ -10,6 +10,10 @@ Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app,:browser => :chrome)
 end
 
+Capybara.register_driver :safari do |app|
+  Capybara::Selenium::Driver.new(app,:browser => :safari)
+end
+
 # Capybara.register_driver :selenium do |app|
 #   browser = (ENV['browser'] || 'firefox').to_sym
 #   Capybara::Selenium::Driver.new(app, :browser => browser)
@@ -21,6 +25,7 @@ Capybara.configure do |config|
   config.match = :prefer_exact #this setting is to ensure Capybara has specific matching rather than fuzzy logic
   # config.default_driver = :chrome # ensures chrome is the default driver
   config.default_driver = :firefox
+  # config.default_driver = :safari
 end
 
 World(CodebarSite)
