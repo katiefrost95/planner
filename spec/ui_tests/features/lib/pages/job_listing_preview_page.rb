@@ -3,7 +3,6 @@ require 'capybara/dsl'
 class JobListingPreviewPage
   include Capybara::DSL
 
-
   def find_edit_button
     find_link("Edit").visible?
   end

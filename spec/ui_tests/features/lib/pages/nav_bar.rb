@@ -5,7 +5,6 @@ class NavBar
 
   MENU_ID = "profile"
 
-
   def click_sign_in_link
     find_link('Sign in').click
   end

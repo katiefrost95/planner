@@ -18,7 +18,7 @@ Scenario: As a user I can update my details
 	When I click on menu
 	And I click update my details
 	And I fill in my details with the info I want
-	When I click save
+	And I click save
 	Then my details should be successfully updated
 
 Scenario: As a user, if I update my details wrong I should stay on the page
@@ -26,7 +26,7 @@ Scenario: As a user, if I update my details wrong I should stay on the page
 	When I click on menu
 	And I click update my details
 	And I fill in my details incorrectly
-	When I click save
+	And I click save
 	Then I should get an error message
 
 Scenario: As a user I can view my invitations
@@ -39,12 +39,12 @@ Scenario: As a user I can view my invitations
 Scenario: As a user I can RSVP to my invitations
   Given I am logged in
   And I am invited to an event
-  And I click on menu
-  When I click on invitations
+  When I click on menu
+  And I click on invitations
   And I click attending to the workshop
   Then I receive a message confirming my attendance
 
-Scenario: As a user I can not atend my invitations
+Scenario: As a user I can not attend my invitations
 	Given I am logged in
 	When  I click on menu
 	And I click on invitations

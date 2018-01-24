@@ -14,7 +14,6 @@ class JobListing
   FIND_MONTH = 'div[id="job_expiry_date_2i_chosen"]'
   CHOOSE_MONTH = 'li[data-option-array-index="7"]'
 
-
   def job_title(title)
     fill_in(JOB_TITLE, with: title)
   end
@@ -58,6 +57,5 @@ class JobListing
   def submit_job_listing
     click_on("Submit job")
   end
-
 
 end

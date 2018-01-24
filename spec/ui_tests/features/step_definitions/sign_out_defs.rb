@@ -10,11 +10,11 @@ Given("I am signed in") do
   end
 end
 
-And("I click on menu") do
+When("I click on menu") do
   nav_bar.click_menu
 end
 
-When("I click sign out") do
+And("I click sign out") do
   homepage_page.click_log_out
 end
 
