@@ -3,7 +3,6 @@ require 'capybara/dsl'
 class Chapters
   include Capybara::DSL
 
-
   def find_sign_up_link
     find_link("Sign up").visible?
   end

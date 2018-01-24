@@ -10,11 +10,11 @@ When("I choose a chapter") do
   homepage_page.click_London_chapter
 end
 
-When("I click on sign up") do
+And("I click on sign up") do
   chapters.click_link_sign_up
 end
 
-When("choose to sign up as a student") do
+And("choose to sign up as a student") do
   new_member_page.click_eligible_student_link
 end
 

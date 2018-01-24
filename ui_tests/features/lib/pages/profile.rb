@@ -35,5 +35,4 @@ class Profile
 
   end
 
-
 end

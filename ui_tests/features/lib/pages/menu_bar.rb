@@ -27,5 +27,4 @@ class MenuBar
     find_link("List a job").click
   end
 
-
 end

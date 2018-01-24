@@ -8,7 +8,6 @@ class GithubLogout
   PROFILE_DROPDOWN = 'user-links'
   AUTHORIZE_BUTTON_ID = 'js-oauth-authorize-btn'
 
-
   def visit_github
     visit(GITHUB_HOMEPAGE)
   end
@@ -20,7 +19,5 @@ class GithubLogout
   def click_logout
     click_button("Sign out")
   end
-
-
 
 end
