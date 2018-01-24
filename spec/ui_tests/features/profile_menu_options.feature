@@ -27,7 +27,7 @@ Scenario: As a user, if I update my details wrong I should stay on the page
 	And I click update my details
 	And I fill in my details incorrectly
 	When I click save
-	Then I should remain on the edit details page
+	Then I should get an error message
 
 Scenario: As a user I can view my invitations
 	Given I am logged in
