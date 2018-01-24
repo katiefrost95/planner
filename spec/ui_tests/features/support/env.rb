@@ -10,10 +10,6 @@ Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app,:browser => :chrome)
 end
 
-Capybara.register_driver :safari do |app|
-  Capybara::Selenium::Driver.new(app,:browser => :safari)
-end
-
 # Capybara.register_driver :selenium do |app|
 #   browser = (ENV['browser'] || 'firefox').to_sym
 #   Capybara::Selenium::Driver.new(app, :browser => browser)
