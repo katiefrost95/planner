@@ -15,5 +15,17 @@ class MenuBar
     find_link("My Profile").click
   end
 
+  def menu_invitations
+    find_link("Invitations").click
+  end
+
+  def menu_details
+    find_link("Update your details").click
+  end
+
+  def job_listing
+    find_link("List a job").click
+  end
+
 
 end
