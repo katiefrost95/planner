@@ -126,3 +126,21 @@ You can pick one of the open [issues](https://github.com/codebar/planner/issues)
 If there is something else that you would like to work on, open an issue first so we can discuss it. We are always open to new ideas and ways of improving planner!
 
 [Guidelines on contributing to planner](https://github.com/codebar/planner/blob/master/CONTRIBUTING.md)
+
+### Running the UI tests
+
+To improve test coverage we've included UI tests into the planner testing the user journey through the website. We used cucumber to do this and have enabled the tests to run for browsers chrome and Firefox. The UI tests are located in spec/ui_tests.
+
+To run all the tests use the command:
+
+```bash
+cd spec/ui_tests
+cucumber
+```
+
+To run a specific test run:
+
+```bash
+cd spec/ui_tests
+cucumber features/featurename.feature
+```
