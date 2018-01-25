@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.2'
 
 gem 'rails', '4.2.10'
-
+gem 'cucumber'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'haml'
 gem 'compass-rails', git: 'https://github.com/Compass/compass-rails'
@@ -31,6 +31,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
+gem 'selenium-webdriver'
 
 gem 'tzinfo-data'
 gem 'icalendar'

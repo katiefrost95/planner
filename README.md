@@ -126,3 +126,42 @@ You can pick one of the open [issues](https://github.com/codebar/planner/issues)
 If there is something else that you would like to work on, open an issue first so we can discuss it. We are always open to new ideas and ways of improving planner!
 
 [Guidelines on contributing to planner](https://github.com/codebar/planner/blob/master/CONTRIBUTING.md)
+
+### Running the UI tests
+
+To improve test coverage we've included UI tests into the planner testing the user journey through the website. We used cucumber to do this and have enabled the tests to run for browsers chrome and Firefox. The UI tests are located in spec/ui_tests.
+Tests are written using Cucumber. The documentation can be found here https://cucumber.io/docs.
+
+To run all the tests use the command:
+
+```bash
+cd spec/ui_tests
+cucumber
+```
+
+To run a specific test run:
+
+```bash
+cd spec/ui_tests
+cucumber features/featurename.feature
+```
+
+Tests can be run in either Firefox or Chrome. To change browsers:
+
+```bash
+cd spec/ui_tests/support
+```
+### Changing the Default Browser
+
+In env.rb you will find the following code, the default browser is currently set to chrome:
+
+```ruby
+Capybara.configure do |config|
+  config.ignore_hidden_elements = false #to ensure that all hidden elements on a page are recorded/available
+  config.default_max_wait_time= 10 #wait time for asynchronus processes to finsh
+  config.match = :prefer_exact #this setting is to ensure Capybara has specific matching rather than fuzzy logic
+  config.default_driver = :chrome # ensures chrome is the default driver
+  # config.default_driver = :firefox
+end
+```
+To change the default browser to Firefox uncomment the default_driver for the browser you want to run your tests in, and comment out the other default_driver
