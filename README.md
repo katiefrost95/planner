@@ -129,13 +129,13 @@ If there is something else that you would like to work on, open an issue first s
 
 ### Running the UI tests
 
-To improve test coverage we've included UI tests into the planner testing the user journey through the website. We used cucumber to do this and have enabled the tests to run for browsers chrome and Firefox. The UI tests are located in spec/ui_tests.
+To improve test coverage we've included UI tests into the planner testing the user journey through the website. We used cucumber to do this and have enabled the tests to run for browsers chrome and Firefox. The UI tests are located in ui_tests folder.
 Tests are written using Cucumber. The documentation can be found here https://cucumber.io/docs.
 
 To run all the tests use the command:
 
 ```bash
-cd spec/ui_tests
+cd ui_tests
 cucumber
 ```
 
@@ -149,7 +149,7 @@ cucumber features/featurename.feature
 Tests can be run in either Firefox or Chrome. To change browsers:
 
 ```bash
-cd spec/ui_tests/support
+cd ui_tests/support
 ```
 ### Changing the Default Browser
 
